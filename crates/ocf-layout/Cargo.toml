@@ -1,0 +1,15 @@
+[package]
+name = "ocf-layout"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "OpenDB OCF - adaptive physical layouts (Phase 7)"
+
+[dependencies]
+ocf-core = { path = "../ocf-core" }
+ocf-format = { path = "../ocf-format" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true

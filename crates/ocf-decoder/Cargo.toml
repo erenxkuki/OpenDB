@@ -1,0 +1,16 @@
+[package]
+name = "ocf-decoder"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "OpenDB OCF - ocf-decoder (Phase 0 skeleton)"
+
+[dependencies]
+ocf-core = { path = "../ocf-core" }
+ocf-format = { path = "../ocf-format" }
+ocf-lossless = { path = "../ocf-lossless" }
+ocf-structural = { path = "../ocf-structural" }
+thiserror.workspace = true
+tokio.workspace = true

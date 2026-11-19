@@ -1,0 +1,14 @@
+[package]
+name = "ocf-runtime"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "OpenDB OCF - ocf-runtime (Phase 0 skeleton)"
+
+[dependencies]
+ocf-core = { path = "../ocf-core" }
+ocf-decoder = { path = "../ocf-decoder" }
+tokio.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,47 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ocf-core",
+    "crates/ocf-format",
+    "crates/ocf-lossless",
+    "crates/ocf-structural",
+    "crates/ocf-semantic",
+    "crates/ocf-planner",
+    "crates/ocf-decoder",
+    "crates/ocf-runtime",
+    "crates/ocf-bench",
+    "crates/ocf-layout",
+]
+# opendb-python is a PyO3 extension crate and is built separately (maturin).
+# It is intentionally not part of the default workspace to avoid pulling
+# PyO3 into the core dependency graph.
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+license = "Apache-2.0 OR MIT"
+authors = ["OpenDB contributors"]
+repository = "https://github.com/opendb/opendb"
+description = "OpenDB — Open Compression Fabric (OCF)"
+
+[workspace.dependencies]
+# Compression
+zstd = "0.13"
+lz4 = "1.24"
+# Hashing
+blake3 = "1.5"
+crc = "3.2"
+# Errors
+thiserror = "2"
+anyhow = "1"
+# Serialization (metadata/debug only)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Async runtime
+tokio = { version = "1", features = ["rt-multi-thread", "fs", "sync"] }
+# Numeric
+arrow = "53"
+# Testing
+proptest = "1"
+criterion = "0.5"

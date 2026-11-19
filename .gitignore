@@ -1,0 +1,6 @@
+/target
+Cargo.lock
+# Phase 0: no production code yet
+*.pdb
+.DS_Store
+Thumbs.db
