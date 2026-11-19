@@ -114,4 +114,4 @@ cargo test --workspace
 
 ## License
 
-Apache-2.0 OR MIT (pending final decision).
+[MIT](LICENSE) © 2026 OpenDB contributors.
